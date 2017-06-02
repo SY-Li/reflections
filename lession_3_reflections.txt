@@ -1,0 +1,5 @@
+git remote # check
+git remote -v # check more information
+
+git remote add origins http://URL 
+git push -u origin master
