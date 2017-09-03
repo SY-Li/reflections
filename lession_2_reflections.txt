@@ -1,6 +1,21 @@
-git init
-git status
+ls -a # view all files including ".git"
+git init # create a git repository
+git status # show the files have changed since last commit
 
-git add
-git reset
-git commit
+git add filename #add to staging area
+git reset #remove all changes in staging area
+git commit / git commit -m "Commit message"
+
+git branch # check all the branches
+git branch name # build a new branch
+git checkout branch_name # switch to a specific branch
+git checkout -b branch_name # build and switch to a new branch
+
+git log --gragh # view commits history in diagram
+git log --oneline # view only description of each commit
+
+git show commit_id # see difference between a commit and its parent commit
+
+git merge master_branch minor_branch # always merge another branche into the currently checked out branch; 
+                                     # the order does not matter; 
+git branch -d minor_branch # delete merged branch (label)

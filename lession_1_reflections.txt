@@ -1,6 +1,8 @@
-git diff old new
-git log 
-git checkout
-git clone
+git diff old new # compare two commits
+git diff # compare working directory to staging area
+git diff --staged # compare staging area to repository
 
-git init
+git log # view the commits history
+git log --stat # view the history with info about which file was affected by that commit
+git checkout commit_id # roll back to a specific commit version
+git clone url # make a copy of entire repository

@@ -1,6 +1,28 @@
 git remote # check
 git remote -v # check more information
 
-git remote add origins http://URL 
-git push -u origin master
-git pull origin master
+git remote add origin http://URL # Generally, "origin" as fork repository, "upstream" as original repository
+git push -u origin master # push local repository to github
+git pull origin master # pull repository on github to local repository
+
+git fetch origin # git pull origin master = git fetch origin + git merge master origin/master; 
+                 # git fetch never changes any of local branches under refs/heads 
+
+General process of collaboration:
+1. Make a pull request:
+git branch newBranch
+git checkout newBranch
+git add changedFile
+git commit
+git push origin newBranch
+
+2. Merge a pull request:
+git fetch origin 
+git merge master origin/master
+(or git pull origin master)
+git checkout newBranch
+git merge master newBranch
+subl conflictFilename
+(resolve conflicts)
+git commit
+git push (or click "Merge" button on GitHub)
